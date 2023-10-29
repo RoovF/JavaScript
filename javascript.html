@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body onmouseover="PassarMouseNaTela ()">
+    <h1 onmouseover="MostrarMensagemAoPassarMouseNaTela()"> O titulo </h1>
+    <p>Um paragrafo feito para um determinado texto</p>
+    <button onclick="MostrarMensagem ()" onmouseover="AlterarBackgroundColorBody('Black')">Click aqui</button>
+    <button onclick="MudarCorBackground ()">Background Azul Escuro</button>
+    <button onclick="MudarMeuCorpo('<H1>Nova Pag<H1>')">Alterar HTML</button>
+</body>
+
+<script>
+    function AlterarBackgroundColorBody(){
+        console.log("Eu movi meu mouser");
+        document.body.style.backgroundColor = "Black"
+    }
+    function MostrarMensagem(){
+        console.log("Eu Cliquei no botão!..");
+    }
+
+    function MostrarMensagemAoPassarMouseNaTela(){
+        console.log("Eu Mexi o Mouse!");
+        document.body.style.backgroundColor = "white"
+    }
+    
+    function MudarCorBackground(){
+        console.log("Eu mudei a cor do Background")
+        document.body.style.backgroundColor = "#454d66";
+        }
+
+    function PassarMouseNaTela(){
+        console.log("Eu mexi meu mouse")
+    }
+    function MudarMeuCorpo(text){
+        document.title = "NOVA PAG!"
+        document.body.innerHTML = text;
+        document.body.innerHTML += '<a href="https://Youtube.com/" target="_blank">Youtube</a>';
+    }
+
+</script>
+</html>
